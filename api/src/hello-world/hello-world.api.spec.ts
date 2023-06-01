@@ -1,17 +1,17 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { Api } from './api';
-import { Service } from './service';
+import { HelloWorldApi } from './hello-world.api';
+import { HelloWorldService } from './hello-world.service';
 
 describe('HelloWorld Controller', () => {
-  let appController: Api;
+  let appController: HelloWorldApi;
 
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({
-      controllers: [Api],
-      providers: [Service],
+      controllers: [HelloWorldApi],
+      providers: [HelloWorldService],
     }).compile();
 
-    appController = app.get(Api);
+    appController = app.get(HelloWorldApi);
   });
 
   describe('root', () => {
