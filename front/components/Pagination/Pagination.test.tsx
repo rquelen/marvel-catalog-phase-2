@@ -1,7 +1,6 @@
 import React from "react";
 import { Pagination } from "./Pagination";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 
 const defaultProps = {
   pagination: {
@@ -84,13 +83,15 @@ describe("Pagination component", () => {
         lastPage: 5,
       },
     };
-    render(<Pagination {...props} />);
 
     // when
-    await userEvent.click(screen.getByTestId("first"));
+    render(<Pagination {...props} />);
 
     // then
-    expect(props.goPage).toHaveBeenCalledWith(1);
+    expect(screen.getByTestId("first")).toHaveAttribute(
+      "href",
+      "/marvel-catalog/1"
+    );
   });
 
   it("should go to previous page on previous page button click", async () => {
@@ -102,13 +103,15 @@ describe("Pagination component", () => {
         lastPage: 5,
       },
     };
-    render(<Pagination {...props} />);
 
     // when
-    await userEvent.click(screen.getByTestId("previous"));
+    render(<Pagination {...props} />);
 
     // then
-    expect(props.goPage).toHaveBeenCalledWith(2);
+    expect(screen.getByTestId("previous")).toHaveAttribute(
+      "href",
+      "/marvel-catalog/2"
+    );
   });
 
   it("should go to next page on next page button click", async () => {
@@ -120,13 +123,15 @@ describe("Pagination component", () => {
         lastPage: 5,
       },
     };
-    render(<Pagination {...props} />);
 
     // when
-    await userEvent.click(screen.getByTestId("next"));
+    render(<Pagination {...props} />);
 
     // then
-    expect(props.goPage).toHaveBeenCalledWith(4);
+    expect(screen.getByTestId("next")).toHaveAttribute(
+      "href",
+      "/marvel-catalog/4"
+    );
   });
 
   it("should go to last page on last page button click", async () => {
@@ -138,12 +143,14 @@ describe("Pagination component", () => {
         lastPage: 5,
       },
     };
-    render(<Pagination {...props} />);
 
     // when
-    await userEvent.click(screen.getByTestId("last"));
+    render(<Pagination {...props} />);
 
     // then
-    expect(props.goPage).toHaveBeenCalledWith(5);
+    expect(screen.getByTestId("last")).toHaveAttribute(
+      "href",
+      "/marvel-catalog/5"
+    );
   });
 });

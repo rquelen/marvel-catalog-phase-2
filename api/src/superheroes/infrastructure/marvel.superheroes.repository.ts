@@ -6,6 +6,7 @@ import {
   SuperHero,
   SuperHeroesPage,
 } from '../domain/superheroes.types';
+import fetch from 'node-fetch';
 
 const PAGE_LIMIT = 20;
 export const MARVEL_API_ROOT = 'http://gateway.marvel.com/v1/public';
@@ -46,7 +47,8 @@ export class MarvelSuperheroesRepository implements SuperheroesRepository {
     const url = new URL(MARVEL_API_ROOT + '/characters');
     url.search = searchParams.toString();
     const apiResponse = await fetch(url);
-    const marvelApiResponse: MarvelApiResponse = await apiResponse.json();
+    const marvelApiResponse: MarvelApiResponse =
+      (await apiResponse.json()) as MarvelApiResponse;
     return this.mapToSuperHeroesPage(marvelApiResponse);
   }
 

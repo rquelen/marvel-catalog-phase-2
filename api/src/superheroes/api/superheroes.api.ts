@@ -11,7 +11,7 @@ export class SuperheroesApi {
   ) {}
 
   @Get()
-  getHello(@Query('page') page: string): Promise<SuperHeroesPage> {
+  getSuperheroes(@Query('page') page: string): Promise<SuperHeroesPage> {
     return getSuperheroes(this.marvelSuperheroesRepository, Number(page));
   }
 }
