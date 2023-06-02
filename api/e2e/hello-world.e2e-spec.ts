@@ -15,9 +15,9 @@ describe('HelloWorld (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/hello-world (GET)', () => {
     return request(app.getHttpServer())
-      .get('/')
+      .get('/hello-world')
       .expect(200)
       .expect('Hello World!');
   });
