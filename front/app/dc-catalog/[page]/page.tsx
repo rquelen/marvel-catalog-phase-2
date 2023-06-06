@@ -20,7 +20,9 @@ export default async function Page({ params }: { params: { page: string } }) {
 
   return (
     <div className="max-w-[1000px] text-center mx-auto my-0">
-      <h1 className="text-center">{universe.toUpperCase()} Super Heroes</h1>
+      <h1 className="text-2xl text-center">
+        {universe.toUpperCase()} Super Heroes
+      </h1>
       <Pagination universe={universe} pagination={heroesPage.pagination} />
       <div className="flex flex-wrap justify-center">
         {heroesPage.heroes.map((hero) => (

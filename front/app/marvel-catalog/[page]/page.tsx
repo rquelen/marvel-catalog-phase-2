@@ -24,7 +24,7 @@ export default async function Page({ params }: { params: { page: string } }) {
 
   return (
     <div className="max-w-[1000px] text-center mx-auto my-0">
-      <h1 className="text-center">
+      <h1 className="text-2xl text-center">
         {capitalizeFirstLetter(universe)} Super Heroes
       </h1>
       <Pagination universe={universe} pagination={heroesPage.pagination} />

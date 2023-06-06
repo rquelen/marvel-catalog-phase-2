@@ -16,7 +16,7 @@ export const Pagination: FunctionComponent<PropTypes> = ({
     pagination && pagination.currentPage === pagination.lastPage;
 
   return (
-    <div className="flex justify-center items-center mx-0 my-5">
+    <div className="flex justify-center items-center mx-0 my-5 gap-5">
       {!isFirstPage && (
         <>
           <LinkButton href={`/${universe}-catalog/1`} id="first">

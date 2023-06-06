@@ -8,7 +8,6 @@ const defaultProps = {
     lastPage: 1,
   },
   universe: "universe",
-  goPage: () => null,
 };
 
 describe("Pagination component", () => {
@@ -78,7 +77,6 @@ describe("Pagination component", () => {
   it("should go to first page on first page button click", async () => {
     // given
     const props = {
-      goPage: jest.fn(),
       pagination: {
         currentPage: 3,
         lastPage: 5,
@@ -98,7 +96,6 @@ describe("Pagination component", () => {
   it("should go to previous page on previous page button click", async () => {
     // given
     const props = {
-      goPage: jest.fn(),
       pagination: {
         currentPage: 3,
         lastPage: 5,
@@ -118,7 +115,6 @@ describe("Pagination component", () => {
   it("should go to next page on next page button click", async () => {
     // given
     const props = {
-      goPage: jest.fn(),
       pagination: {
         currentPage: 3,
         lastPage: 5,
@@ -138,7 +134,6 @@ describe("Pagination component", () => {
   it("should go to last page on last page button click", async () => {
     // given
     const props = {
-      goPage: jest.fn(),
       pagination: {
         currentPage: 3,
         lastPage: 5,

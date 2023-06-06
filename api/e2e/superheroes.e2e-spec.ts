@@ -4,7 +4,7 @@ import { Test } from '@nestjs/testing';
 import * as request from 'supertest';
 import { MARVEL_API_ROOT } from '../src/superheroes/infrastructure/marvel.superheroes.repository';
 import { firstPage } from '../src/superheroes/infrastructure/fake/superheroes.fixture';
-import { firstPageDC } from '../src/superheroes/infrastructure/test/dc.superheroes.repository.spec';
+import { firstPageDC } from '../src/superheroes/infrastructure/test/dc.fixtures';
 import nock = require('nock');
 
 describe('Superheroes (e2e)', () => {

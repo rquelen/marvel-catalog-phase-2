@@ -12,7 +12,7 @@ export const LinkButton = ({
 }: PropsWithChildren<LinkButtonProps>) => (
   <Link
     href={href}
-    className="text-3xl cursor-pointer text-[hsl(209,18%,30%)] outline-0 border-0 hover:text-[hsl(210,24%,16%)]"
+    className="text-3xl cursor-pointer text-[hsl(209,18%,30%)] outline-0 border-0 hover:text-[hsl(210,24%,16%)] hover:underline"
     data-testid={id}
   >
     {children}
