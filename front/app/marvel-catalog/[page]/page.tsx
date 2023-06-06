@@ -1,7 +1,8 @@
-import { HeroCard } from "@/app/components/HeroCard/HeroCard";
 import { ClientHeroes } from "@/types/clientResponses";
-import { Pagination } from "@/app/components/Pagination/Pagination";
 import { get } from "@/app/helpers/http";
+import React from "react";
+import { Pagination } from "@/app/components/Pagination/Pagination";
+import { HeroCard } from "@/app/components/HeroCard/HeroCard";
 
 const fetchHeroes = async (page: string): Promise<ClientHeroes> => {
   return await get<ClientHeroes>(
