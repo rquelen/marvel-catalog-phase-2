@@ -7,6 +7,7 @@ const defaultProps = {
     currentPage: 1,
     lastPage: 1,
   },
+  universe: "universe",
   goPage: () => null,
 };
 
@@ -85,12 +86,12 @@ describe("Pagination component", () => {
     };
 
     // when
-    render(<Pagination {...props} />);
+    render(<Pagination universe={"universe"} {...props} />);
 
     // then
     expect(screen.getByTestId("first")).toHaveAttribute(
       "href",
-      "/marvel-catalog/1"
+      "/universe-catalog/1"
     );
   });
 
@@ -105,12 +106,12 @@ describe("Pagination component", () => {
     };
 
     // when
-    render(<Pagination {...props} />);
+    render(<Pagination universe={"universe"} {...props} />);
 
     // then
     expect(screen.getByTestId("previous")).toHaveAttribute(
       "href",
-      "/marvel-catalog/2"
+      "/universe-catalog/2"
     );
   });
 
@@ -125,12 +126,12 @@ describe("Pagination component", () => {
     };
 
     // when
-    render(<Pagination {...props} />);
+    render(<Pagination universe={"universe"} {...props} />);
 
     // then
     expect(screen.getByTestId("next")).toHaveAttribute(
       "href",
-      "/marvel-catalog/4"
+      "/universe-catalog/4"
     );
   });
 
@@ -145,12 +146,12 @@ describe("Pagination component", () => {
     };
 
     // when
-    render(<Pagination {...props} />);
+    render(<Pagination universe={"universe"} {...props} />);
 
     // then
     expect(screen.getByTestId("last")).toHaveAttribute(
       "href",
-      "/marvel-catalog/5"
+      "/universe-catalog/5"
     );
   });
 });

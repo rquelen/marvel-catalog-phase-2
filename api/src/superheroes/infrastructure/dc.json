@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Aquaman",
+    "alter_ego": "Arthur Curry",
+    "powers": [
+      "Superhuman Strength",
+      "Swimming",
+      "Telepathy"
+    ],
+    "first_appearance": "More Fun Comics #73",
+    "photo_url": "/aquaman.jpeg"
+  },
+  {
+    "name": "Batgirl",
+    "alter_ego": "Barbara Gordon",
+    "powers": [
+      "Combat Skills",
+      "Intellect",
+      "Gadgets"
+    ],
+    "first_appearance": "Detective Comics #359",
+    "photo_url": "/batgirl.jpeg"
+  },
+  {
+    "name": "Batman",
+    "alter_ego": "Bruce Wayne",
+    "powers": [
+      "Intelligence",
+      "Combat Skills",
+      "Gadgets"
+    ],
+    "first_appearance": "Detective Comics #27",
+    "photo_url": "/batman.avif"
+  },
+  {
+    "name": "Black Canary",
+    "alter_ego": "Dinah Lance",
+    "powers": [
+      "Canary Cry",
+      "Martial Arts",
+      "Acrobatics"
+    ],
+    "first_appearance": "Flash Comics #86",
+    "photo_url": "/black_canary.png"
+  },
+  {
+    "name": "Cyborg",
+    "alter_ego": "Victor Stone",
+    "powers": [
+      "Technological Enhancement",
+      "Superhuman Strength",
+      "Energy Projection"
+    ],
+    "first_appearance": "DC Comics Presents #26",
+    "photo_url": "/cyborg.jpeg"
+  },
+  {
+    "name": "Flash",
+    "alter_ego": "Barry Allen",
+    "powers": [
+      "Superhuman Speed",
+      "Time Travel",
+      "Phasing"
+    ],
+    "first_appearance": "Showcase #4",
+    "photo_url": "/flash.jpeg"
+  },
+  {
+    "name": "Green Arrow",
+    "alter_ego": "Oliver Queen",
+    "powers": [
+      "Master Archer",
+      "Acrobatics",
+      "Marksmanship"
+    ],
+    "first_appearance": "More Fun Comics #73",
+    "photo_url": "/green_arrow.jpeg"
+  },
+  {
+    "name": "Green Lantern",
+    "alter_ego": "Hal Jordan",
+    "powers": [
+      "Green Lantern Ring",
+      "Energy Constructs",
+      "Flight"
+    ],
+    "first_appearance": "Showcase #22",
+    "photo_url": "/green_lantern.jpeg"
+  },
+  {
+    "name": "Hawkgirl",
+    "alter_ego": "Kendra Saunders",
+    "powers": [
+      "Flight",
+      "Enhanced Strength",
+      "Reincarnation"
+    ],
+    "first_appearance": "All Star Comics #5",
+    "photo_url": "/hawkgirl.png"
+  },
+  {
+    "name": "Hawkman",
+    "alter_ego": "Carter Hall",
+    "powers": [
+      "Flight",
+      "Enhanced Strength",
+      "Reincarnation"
+    ],
+    "first_appearance": "Flash Comics #1",
+    "photo_url": "/hawkman.jpeg"
+  }
+]

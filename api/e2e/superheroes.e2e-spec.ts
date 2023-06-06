@@ -4,6 +4,7 @@ import { Test } from '@nestjs/testing';
 import * as request from 'supertest';
 import { MARVEL_API_ROOT } from '../src/superheroes/infrastructure/marvel.superheroes.repository';
 import { firstPage } from '../src/superheroes/infrastructure/fake/superheroes.fixture';
+import { firstPageDC } from '../src/superheroes/infrastructure/test/dc.superheroes.repository.spec';
 import nock = require('nock');
 
 describe('Superheroes (e2e)', () => {
@@ -25,7 +26,7 @@ describe('Superheroes (e2e)', () => {
       .reply(200, {
         data: {
           offset: 0,
-          total: 2,
+          total: 3,
           limit: 1,
           results: [
             {
@@ -45,5 +46,12 @@ describe('Superheroes (e2e)', () => {
       .get('/superheroes/marvel?page=1')
       .expect(200)
       .expect(firstPage);
+  });
+
+  it('/superheroes/dc (GET)', async () => {
+    return request(app.getHttpServer())
+      .get('/superheroes/dc?page=1')
+      .expect(200)
+      .expect(firstPageDC);
   });
 });

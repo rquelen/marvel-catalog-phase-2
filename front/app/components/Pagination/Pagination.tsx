@@ -1,12 +1,16 @@
 import React, { FunctionComponent } from "react";
-import { LinkButton } from "@/app/marvel-catalog/[page]/components/LinkButton/LinkButton";
+import { LinkButton } from "@/app/components/LinkButton/LinkButton";
 import { ClientPagination } from "@/types/pagination";
 
 interface PropTypes {
+  universe: string;
   pagination: ClientPagination;
 }
 
-export const Pagination: FunctionComponent<PropTypes> = ({ pagination }) => {
+export const Pagination: FunctionComponent<PropTypes> = ({
+  universe,
+  pagination,
+}) => {
   const isFirstPage = pagination && pagination.currentPage === 1;
   const isLastPage =
     pagination && pagination.currentPage === pagination.lastPage;
@@ -15,11 +19,11 @@ export const Pagination: FunctionComponent<PropTypes> = ({ pagination }) => {
     <div className="flex justify-center items-center mx-0 my-5">
       {!isFirstPage && (
         <>
-          <LinkButton href={"/marvel-catalog/1"} id="first">
+          <LinkButton href={`/${universe}-catalog/1`} id="first">
             ◂◂
           </LinkButton>
           <LinkButton
-            href={`/marvel-catalog/${pagination.currentPage - 1}`}
+            href={`/${universe}-catalog/${pagination.currentPage - 1}`}
             id="previous"
           >
             ◂
@@ -32,13 +36,16 @@ export const Pagination: FunctionComponent<PropTypes> = ({ pagination }) => {
       {!isLastPage && (
         <>
           <LinkButton
-            href={`/marvel-catalog/${pagination.currentPage + 1}`}
+            href={`/${universe}-catalog/${pagination.currentPage + 1}`}
             id="next"
           >
             ▸
           </LinkButton>
 
-          <LinkButton href={`/marvel-catalog/${pagination.lastPage}`} id="last">
+          <LinkButton
+            href={`/${universe}-catalog/${pagination.lastPage}`}
+            id="last"
+          >
             ▸▸
           </LinkButton>
         </>
