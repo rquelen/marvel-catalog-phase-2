@@ -1,4 +1,4 @@
-import { SuperHeroesPage } from '../superheroes.types';
+import { SuperHeroesPage } from '../../domain/superheroes.types';
 
 export const firstPage: SuperHeroesPage = {
   heroes: [
@@ -9,7 +9,7 @@ export const firstPage: SuperHeroesPage = {
   ],
   pagination: {
     currentPage: 1,
-    lastPage: 2,
+    lastPage: 3,
   },
 };
 export const secondPage: SuperHeroesPage = {
@@ -21,6 +21,19 @@ export const secondPage: SuperHeroesPage = {
   ],
   pagination: {
     currentPage: 2,
-    lastPage: 2,
+    lastPage: 3,
+  },
+};
+
+export const thirdPage: SuperHeroesPage = {
+  heroes: [
+    {
+      name: 'C',
+      image: 'C.jpg',
+    },
+  ],
+  pagination: {
+    currentPage: 3,
+    lastPage: 3,
   },
 };

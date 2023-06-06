@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { LinkButton } from "@/components/LinkButton/LinkButton";
+import { LinkButton } from "@/app/marvel-catalog/[page]/components/LinkButton/LinkButton";
 import { ClientPagination } from "@/types/pagination";
 
 interface PropTypes {

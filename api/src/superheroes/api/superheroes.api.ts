@@ -3,15 +3,20 @@ import { MarvelSuperheroesRepository } from '../infrastructure/marvel.superheroe
 import { getSuperheroes } from '../domain/get-superheroes.usecase';
 
 import { SuperHeroesPage } from '../domain/superheroes.types';
+import { FakeSuperHeroesRepository } from '../infrastructure/fake/fake.superheroes.repository';
 
 @Controller('superheroes')
 export class SuperheroesApi {
   constructor(
     private readonly marvelSuperheroesRepository: MarvelSuperheroesRepository,
+    private readonly fakeSuperHeroesRepository: FakeSuperHeroesRepository,
   ) {}
 
   @Get()
   getSuperheroes(@Query('page') page: string): Promise<SuperHeroesPage> {
-    return getSuperheroes(this.marvelSuperheroesRepository, Number(page));
+    const repository = process.env.TEST_MODE
+      ? this.fakeSuperHeroesRepository
+      : this.marvelSuperheroesRepository;
+    return getSuperheroes(repository, Number(page));
   }
 }

@@ -3,7 +3,7 @@ import { AppModule } from '../src/app.module';
 import { Test } from '@nestjs/testing';
 import * as request from 'supertest';
 import { MARVEL_API_ROOT } from '../src/superheroes/infrastructure/marvel.superheroes.repository';
-import { firstPage } from '../src/superheroes/domain/test/superheroes.fixture';
+import { firstPage } from '../src/superheroes/infrastructure/fake/superheroes.fixture';
 import nock = require('nock');
 
 describe('Superheroes (e2e)', () => {

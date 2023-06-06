@@ -1,6 +1,9 @@
 import { getSuperheroes } from '../get-superheroes.usecase';
-import { FakeSuperHeroesRepository } from './fake.superheroes.repository';
-import { firstPage, secondPage } from './superheroes.fixture';
+import { FakeSuperHeroesRepository } from '../../infrastructure/fake/fake.superheroes.repository';
+import {
+  firstPage,
+  secondPage,
+} from '../../infrastructure/fake/superheroes.fixture';
 
 describe('get superheroes usecase', () => {
   const fakeSuperHeroesRepository = new FakeSuperHeroesRepository();

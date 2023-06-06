@@ -1,13 +1,12 @@
-import { HeroCard } from "@/components/HeroCard/HeroCard";
+import { HeroCard } from "@/app/marvel-catalog/[page]/components/HeroCard/HeroCard";
 import { ClientHeroes } from "@/types/clientResponses";
-import { Pagination } from "@/components/Pagination/Pagination";
+import { Pagination } from "@/app/marvel-catalog/[page]/components/Pagination/Pagination";
+import { get } from "@/app/helpers/http";
 
 const fetchHeroes = async (page: string): Promise<ClientHeroes> => {
-  const responsePromise = await fetch(
-    `http://localhost:3001/superheroes?page=${page}`,
-    { cache: "force-cache" }
+  return await get<ClientHeroes>(
+    `http://localhost:3001/superheroes?page=${page}`
   );
-  return responsePromise.json();
 };
 
 export default async function Page({ params }: { params: { page: string } }) {

@@ -3,7 +3,7 @@ import {
   MarvelSuperheroesRepository,
   PUBLIC_KEY,
 } from '../marvel.superheroes.repository';
-import { firstPage, secondPage } from '../../domain/test/superheroes.fixture';
+import { firstPage, secondPage } from '../fake/superheroes.fixture';
 import nock = require('nock');
 
 describe('marvel superheros repository', () => {
@@ -36,7 +36,7 @@ describe('marvel superheros repository', () => {
       .reply(200, {
         data: {
           offset: 0,
-          total: 2,
+          total: 3,
           limit: 1,
           results: [
             {
@@ -76,7 +76,7 @@ describe('marvel superheros repository', () => {
       .reply(200, {
         data: {
           offset: 1,
-          total: 2,
+          total: 3,
           limit: 1,
           results: [
             {
