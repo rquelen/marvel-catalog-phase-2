@@ -5,7 +5,7 @@ import { get } from "@/app/helpers/http";
 
 const fetchHeroes = async (page: string): Promise<ClientHeroes> => {
   return await get<ClientHeroes>(
-    `http://localhost:3001/superheroes?page=${page}`
+    `http://localhost:3001/superheroes/marvel?page=${page}`
   );
 };
 

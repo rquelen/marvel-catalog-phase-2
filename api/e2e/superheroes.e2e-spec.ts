@@ -18,7 +18,7 @@ describe('Superheroes (e2e)', () => {
     await app.init();
   });
 
-  it('/superheroes (GET)', async () => {
+  it('/superheroes/marvel (GET)', async () => {
     nock(MARVEL_API_ROOT)
       .get('/characters')
       .query(true)
@@ -42,7 +42,7 @@ describe('Superheroes (e2e)', () => {
       });
 
     return request(app.getHttpServer())
-      .get('/superheroes?page=1')
+      .get('/superheroes/marvel?page=1')
       .expect(200)
       .expect(firstPage);
   });

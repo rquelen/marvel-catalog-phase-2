@@ -12,7 +12,7 @@ export class SuperheroesApi {
     private readonly fakeSuperHeroesRepository: FakeSuperHeroesRepository,
   ) {}
 
-  @Get()
+  @Get('/marvel')
   getSuperheroes(@Query('page') page: string): Promise<SuperHeroesPage> {
     const repository = process.env.TEST_MODE
       ? this.fakeSuperHeroesRepository
